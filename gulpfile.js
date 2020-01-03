@@ -59,7 +59,7 @@ gulp.task('main-min', function(){
   return gulp.src("app/js/main.js")
   .pipe(uglify())
   .pipe(rename({ suffix: ".min" }))
-  .pipe(gulp.dest("app/js"))
+  .pipe(gulp.dest("app/js"));
   
 });
 
@@ -79,5 +79,5 @@ gulp.task("watch", function() {
 });
 gulp.task(
   "default",
-  gulp.parallel("style", "script", "sass", "watch", "browser-sync",'main-min')
+  gulp.parallel("style", "script", "sass", "watch", "browser-sync","main-min")
 );
